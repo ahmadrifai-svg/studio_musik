@@ -220,19 +220,26 @@
             <p class="eyebrow">Dipercaya kreator</p>
             <h2 id="testimonials-title">Apa Kata Mereka</h2>
           </header>
-          <div class="testi">
-            <figure class="quote">
-              <blockquote>
-                “Monitoring paling jernih yang pernah saya coba. Engineer-nya cepat nangkep kemauan saya.”
-              </blockquote>
-              <figcaption>— Raka Pratama, Produser</figcaption>
-            </figure>
-            <figure class="quote">
-              <blockquote>
-                “Setup podcast lengkap, tinggal duduk rekam. Hasilnya rapi dan cepat.”
-              </blockquote>
-              <figcaption>— Sinta & Naya, Podcaster</figcaption>
-            </figure>
+          <div class="testi" data-slider aria-roledescription="carousel" aria-label="Testimoni">
+            <div class="testi-track" data-slider-track>
+              <figure class="quote" role="group" aria-roledescription="slide" aria-label="1 dari 2">
+                <blockquote>
+                  “Monitoring paling jernih yang pernah saya coba. Engineer-nya cepat nangkep kemauan saya.”
+                </blockquote>
+                <figcaption>— Raka Pratama, Produser</figcaption>
+              </figure>
+              <figure class="quote" role="group" aria-roledescription="slide" aria-label="2 dari 2">
+                <blockquote>
+                  “Setup podcast lengkap, tinggal duduk rekam. Hasilnya rapi dan cepat.”
+                </blockquote>
+                <figcaption>— Sinta & Naya, Podcaster</figcaption>
+              </figure>
+            </div>
+            <div class="testi-nav" aria-label="Navigasi slide">
+              <button class="testi-btn prev" aria-label="Sebelumnya" data-slider-prev>‹</button>
+              <button class="testi-btn next" aria-label="Berikutnya" data-slider-next>›</button>
+            </div>
+            <div class="testi-dots" data-slider-dots aria-hidden="true"></div>
           </div>
         </div>
       </section>
@@ -255,54 +262,87 @@
 
       <!-- Contact -->
       <section id="contact" class="section alt" aria-labelledby="contact-title">
-        <div class="container grid-2">
-          <div>
-            <header class="section-header">
-              <p class="eyebrow">Hubungi kami</p>
-              <h2 id="contact-title">Ayo Diskusikan Proyek Anda</h2>
-              <p class="subhead">DM Instagram `@pai.studio`, WhatsApp `+62 812 0000 0000`, atau kirim pesan via formulir.</p>
-            </header>
-            <ul class="contact-list">
-              <li><span>📍</span> Jember</li>
-              <li><span>⏰</span> Buka 24/7 (by appointment)</li>
-              <li><span>✉️</span> pai@gmail.com</li>
-            </ul>
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Hubungi kami</p>
+            <h2 id="contact-title">Ayo Diskusikan Proyek Anda</h2>
+            <p class="subhead">DM Instagram <strong>@pai.studio</strong>, WhatsApp <strong>+62 812 0000 0000</strong>, atau kirim pesan via formulir.</p>
+          </header>
+
+          <div class="contact-grid grid-2">
+            <div>
+              <div class="map-embed" aria-label="Lokasi Studio di peta">
+                <iframe
+                  title="Lokasi Studio"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.570964545788!2d113.7240009!3d-7.6316516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6944a6f9c6c01%3A0x9f3b2a1d9e5e5a3!2sJember!5e0!3m2!1sid!2sid!4v1700000000000"
+                  width="100%"
+                  height="100%"
+                  style="border:0;"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+            <form class="contact-form" aria-label="Formulir kontak" data-contact-form>
+              <div class="field">
+                <label for="name">Nama</label>
+                <input id="name" name="name" required autocomplete="name" placeholder="Nama lengkap Anda" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required autocomplete="email" placeholder="nama@email.com" />
+              </div>
+              <div class="field">
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Ceritakan kebutuhan Anda"></textarea>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">Kirim</button>
+              <p class="form-note" role="status" aria-live="polite" hidden data-form-note></p>
+            </form>
           </div>
-          <form class="contact-form" aria-label="Formulir kontak" data-contact-form>
-            <div class="field">
-              <label for="name">Nama</label>
-              <input id="name" name="name" required autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required autocomplete="email" />
-            </div>
-            <div class="field">
-              <label for="message">Pesan</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button class="btn btn-primary" type="submit">Kirim</button>
-            <p class="form-note" role="status" aria-live="polite" hidden data-form-note></p>
-          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <a class="brand" href="#home">
-          <span class="brand-mark" aria-hidden="true">♬</span>
-          <span class="brand-name">ARIA Studio</span>
-        </a>
-        <nav aria-label="Tautan footer">
+        <div class="footer-about">
+          <a class="brand" href="#home">
+            <span class="brand-mark" aria-hidden="true">♬</span>
+            <span class="brand-name">ARIA Studio</span>
+          </a>
+          <p class="about-text">Studio musik premium untuk rehearsal, recording, mixing & mastering. Akustik terkontrol, gear profesional, dan engineer berpengalaman.</p>
+        </div>
+
+        <div class="footer-hours">
+          <h4>Jam Operasional</h4>
           <ul>
-            <li><a href="#services">Layanan</a></li>
-            <li><a href="#studios">Studio</a></li>
-            <li><a href="#pricing">Harga</a></li>
-            <li><a href="#contact">Kontak</a></li>
-            <li><a href="#booking" data-open-booking>Booking</a></li>
+            <li>Senin - Jumat: 10.00 – 22.00</li>
+            <li>Sabtu - Minggu: 09.00 – 23.00</li>
+            <li>By appointment untuk sesi di luar jam</li>
           </ul>
-        </nav>
+        </div>
+
+        <div class="footer-social">
+          <h4>Ikuti Kami</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">
+              <span>📷</span>
+              <span>@pai.studio</span>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <span>▶️</span>
+              <span>ARIA Studio</span>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <span>🎵</span>
+              <span>@aria.studio</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
         <p class="legal">© <span data-year></span> ARIA Studio. All rights reserved.</p>
       </div>
     </footer>

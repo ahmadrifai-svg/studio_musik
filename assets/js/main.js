@@ -10,6 +10,11 @@
   const yearEl = document.querySelector('[data-year]');
   const contactForm = document.querySelector('[data-contact-form]');
   const contactNote = document.querySelector('[data-form-note]');
+  const slider = document.querySelector('[data-slider]');
+  const sliderTrack = document.querySelector('[data-slider-track]');
+  const sliderPrev = document.querySelector('[data-slider-prev]');
+  const sliderNext = document.querySelector('[data-slider-next]');
+  const sliderDots = document.querySelector('[data-slider-dots]');
 
   // Set year
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -89,6 +94,62 @@
       }
       contactForm.reset();
     });
+  }
+
+  // Testimonials slider + autoplay 5s
+  if (slider && sliderTrack) {
+    const slides = Array.from(sliderTrack.children);
+    let current = 0;
+    let autoplayTimer = null;
+    const AUTOPLAY_MS = 5000;
+
+    // Dots
+    if (sliderDots) {
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `Ke slide ${i + 1}`);
+        if (i === 0) dot.setAttribute('aria-current', 'true');
+        dot.addEventListener('click', () => goTo(i));
+        sliderDots.appendChild(dot);
+      });
+    }
+
+    const update = () => {
+      const offset = slider.clientWidth * current;
+      sliderTrack.scrollTo({ left: offset, behavior: 'smooth' });
+      if (sliderDots) {
+        Array.from(sliderDots.children).forEach((d, i) => {
+          if (i === current) d.setAttribute('aria-current', 'true');
+          else d.removeAttribute('aria-current');
+        });
+      }
+    };
+
+    const goTo = (index) => {
+      current = (index + slides.length) % slides.length;
+      update();
+    };
+
+    sliderPrev && sliderPrev.addEventListener('click', () => goTo(current - 1));
+    sliderNext && sliderNext.addEventListener('click', () => goTo(current + 1));
+
+    // Resize handling
+    window.addEventListener('resize', update);
+
+    // Autoplay
+    const startAutoplay = () => {
+      stopAutoplay();
+      autoplayTimer = setInterval(() => { goTo(current + 1); }, AUTOPLAY_MS);
+    };
+    const stopAutoplay = () => { if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; } };
+    startAutoplay();
+
+    // Pause on hover/focus
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+    slider.addEventListener('focusin', stopAutoplay);
+    slider.addEventListener('focusout', startAutoplay);
   }
 })();
 
