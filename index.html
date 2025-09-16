@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title> Studio — Premium Music Studio</title>
+    <meta name="description" content="Studio musik premium dengan ruang kedap suara, peralatan pro, dan engineer berpengalaman. Booking mudah, harga transparan." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎵</text></svg>">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Beranda ARIA Studio">
+          <span class="brand-mark" aria-hidden="true">♬</span>
+          <span class="brand-name"> Studio</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Buka navigasi" data-nav-toggle>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <nav id="nav" class="site-nav" aria-label="Navigasi utama">
+          <ul>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#studios">Studio</a></li>
+            <li><a href="#pricing">Harga</a></li>
+            <li><a href="#testimonials">Testimoni</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li><a class="btn btn-primary btn-sm" href="#booking" data-open-booking>Booking</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section id="home" class="hero section" aria-label="Pembuka">
+        <div class="container grid-2">
+          <div class="hero-copy">
+            <p class="eyebrow">Premium Recording & Rehearsal</p>
+            <h1 class="display">Bunyikan Imajinasi Anda di Studio Kelas Dunia</h1>
+            <p class="lead">Ruang akustik terbaik, gear pilihan, dan engineer berpengalaman. Dari rehearsal, recording, hingga mixing & mastering — semua dalam satu atap.</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#booking" data-open-booking>Booking Sekarang</a>
+              <a class="btn btn-ghost" href="#studios">Lihat Studio</a>
+            </div>
+            <ul class="badges">
+              <li>24/7</li>
+              <li>Pro Gear</li>
+              <li>Engineer On-site</li>
+              <li>Free Wi‑Fi</li>
+            </ul>
+          </div>
+          <div class="hero-media">
+            <div class="media-card glow">
+              <div class="media-poster" role="img" aria-label="Studio dengan lighting hangat dan mikrofon kondensor"></div>
+              <div class="media-overlay">
+                <div class="stat">
+                  <span class="stat-value">1200+</span>
+                  <span class="stat-label">Sesi/Tahun</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">98%</span>
+                  <span class="stat-label">Kepuasan</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">6</span>
+                  <span class="stat-label">Ruang</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="section" aria-labelledby="services-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Apa yang kami tawarkan</p>
+            <h2 id="services-title">Layanan Profesional</h2>
+            <p class="subhead">Solusi lengkap untuk musisi, podcaster, dan content creator.</p>
+          </header>
+
+          <div class="cards grid-3">
+            <article class="card">
+              <div class="card-icon">🎙️</div>
+              <h3>Recording</h3>
+              <p>Vokal, instrumen, voice-over, hingga orkestrasi. Akustik terkontrol, preamp kelas atas.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon">🎚️</div>
+              <h3>Mixing & Mastering</h3>
+              <p>Racik sonik profesional untuk rilis radio dan digital platform.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon">🥁</div>
+              <h3>Rehearsal</h3>
+              <p>Ruang latihan kedap suara dengan monitoring jelas dan drum kit premium.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon">📻</div>
+              <h3>Podcast</h3>
+              <p>Setup multi-mic, remote guest, dan post-production cepat.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon">🎬</div>
+              <h3>Live Session</h3>
+              <p>Video live session multi-angle dengan lighting sinematik.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon">🎼</div>
+              <h3>Produksi Musik</h3>
+              <p>Komposisi, aransemen, hingga sound design untuk iklan dan film.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Studios -->
+      <section id="studios" class="section alt" aria-labelledby="studios-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Ruang yang menginspirasi</p>
+            <h2 id="studios-title">Pilih Studio Anda</h2>
+          </header>
+          <div class="studio-list">
+            <article class="studio">
+              <div class="studio-media studio-a" role="img" aria-label="Studio A dengan konsol besar dan ambience hangat"></div>
+              <div class="studio-body">
+                <h3>Studio A — Flagship</h3>
+                <p>Ruang mixing/mastering dengan monitoring referensi, ideal untuk produksi skala penuh.</p>
+                <ul class="meta">
+                  <li>Console: SSL emulation</li>
+                  <li>Mic: U87, C414</li>
+                  <li>Monitors: ATC / Genelec</li>
+                </ul>
+                <a class="btn btn-ghost btn-sm" href="#booking" data-open-booking data-studio="Studio A">Booking</a>
+              </div>
+            </article>
+
+            <article class="studio">
+              <div class="studio-media studio-b" role="img" aria-label="Studio B dengan drum kit dan dinding akustik"></div>
+              <div class="studio-body">
+                <h3>Studio B — Live Room</h3>
+                <p>Ruang live untuk band full, drum tracking, dan live session video.</p>
+                <ul class="meta">
+                  <li>Drum: Maple Custom</li>
+                  <li>Mic: SM7B, e609, D112</li>
+                  <li>Monitoring: In‑ear & wedges</li>
+                </ul>
+                <a class="btn btn-ghost btn-sm" href="#booking" data-open-booking data-studio="Studio B">Booking</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="section" aria-labelledby="pricing-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Harga transparan</p>
+            <h2 id="pricing-title">Paket Fleksibel</h2>
+          </header>
+          <div class="pricing grid-3">
+            <article class="price-card">
+              <h3>Rehearsal</h3>
+              <p class="price"><span>Rp</span>120K<span>/jam</span></p>
+              <ul>
+                <li>Ruang kedap suara</li>
+                <li>Backline standar</li>
+                <li>Gratis air mineral</li>
+              </ul>
+              <a class="btn btn-primary btn-block" href="#booking" data-open-booking data-studio="Rehearsal">Pilih</a>
+            </article>
+            <article class="price-card featured">
+              <div class="ribbon">Favorit</div>
+              <h3>Recording</h3>
+              <p class="price"><span>Rp</span>350K<span>/jam</span></p>
+              <ul>
+                <li>Engineer on‑site</li>
+                <li>Mic premium</li>
+                <li>Editing dasar</li>
+              </ul>
+              <a class="btn btn-primary btn-block" href="#booking" data-open-booking data-studio="Recording">Pilih</a>
+            </article>
+            <article class="price-card">
+              <h3>Mixing & Mastering</h3>
+              <p class="price"><span>Rp</span>1.8Jt<span>/track</span></p>
+              <ul>
+                <li>3x revisi</li>
+                <li>Radio-ready</li>
+                <li>Delivery WAV + MP3</li>
+              </ul>
+              <a class="btn btn-primary btn-block" href="#booking" data-open-booking data-studio="Mixing">Pilih</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="section alt" aria-labelledby="testimonials-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Dipercaya kreator</p>
+            <h2 id="testimonials-title">Apa Kata Mereka</h2>
+          </header>
+          <div class="testi">
+            <figure class="quote">
+              <blockquote>
+                “Monitoring paling jernih yang pernah saya coba. Engineer-nya cepat nangkep kemauan saya.”
+              </blockquote>
+              <figcaption>— Raka Pratama, Produser</figcaption>
+            </figure>
+            <figure class="quote">
+              <blockquote>
+                “Setup podcast lengkap, tinggal duduk rekam. Hasilnya rapi dan cepat.”
+              </blockquote>
+              <figcaption>— Sinta & Naya, Podcaster</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="gallery" class="section" aria-labelledby="gallery-title">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Suasana & vibe</p>
+            <h2 id="gallery-title">Galeri</h2>
+          </header>
+          <div class="gallery grid-4">
+            <div class="gal-item" aria-label="Mixer dan fader" role="img"></div>
+            <div class="gal-item" aria-label="Mikrofon kondensor" role="img"></div>
+            <div class="gal-item" aria-label="Drum kit" role="img"></div>
+            <div class="gal-item" aria-label="Gitar dan amp" role="img"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section alt" aria-labelledby="contact-title">
+        <div class="container grid-2">
+          <div>
+            <header class="section-header">
+              <p class="eyebrow">Hubungi kami</p>
+              <h2 id="contact-title">Ayo Diskusikan Proyek Anda</h2>
+              <p class="subhead">DM Instagram `@pai.studio`, WhatsApp `+62 812 0000 0000`, atau kirim pesan via formulir.</p>
+            </header>
+            <ul class="contact-list">
+              <li><span>📍</span> Jember</li>
+              <li><span>⏰</span> Buka 24/7 (by appointment)</li>
+              <li><span>✉️</span> pai@gmail.com</li>
+            </ul>
+          </div>
+          <form class="contact-form" aria-label="Formulir kontak" data-contact-form>
+            <div class="field">
+              <label for="name">Nama</label>
+              <input id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Kirim</button>
+            <p class="form-note" role="status" aria-live="polite" hidden data-form-note></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#home">
+          <span class="brand-mark" aria-hidden="true">♬</span>
+          <span class="brand-name">ARIA Studio</span>
+        </a>
+        <nav aria-label="Tautan footer">
+          <ul>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#studios">Studio</a></li>
+            <li><a href="#pricing">Harga</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#booking" data-open-booking>Booking</a></li>
+          </ul>
+        </nav>
+        <p class="legal">© <span data-year></span> ARIA Studio. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <dialog class="modal" data-booking-modal aria-labelledby="modal-title">
+      <form method="dialog" class="modal-panel glow" data-booking-form>
+        <button class="modal-close" value="close" aria-label="Tutup">✕</button>
+        <header class="modal-header">
+          <h3 id="modal-title">Booking Studio</h3>
+          <p class="modal-sub">Pilih jadwal dan lengkapi detail Anda.</p>
+        </header>
+        <div class="modal-body">
+          <div class="field">
+            <label for="studio">Studio</label>
+            <select id="studio" name="studio" required>
+              <option value="Rehearsal">Rehearsal</option>
+              <option value="Recording">Recording</option>
+              <option value="Mixing">Mixing & Mastering</option>
+              <option value="Studio A">Studio A</option>
+              <option value="Studio B">Studio B</option>
+            </select>
+          </div>
+          <div class="field grid">
+            <div>
+              <label for="date">Tanggal</label>
+              <input id="date" name="date" type="date" required />
+            </div>
+            <div>
+              <label for="time">Jam</label>
+              <input id="time" name="time" type="time" required />
+            </div>
+          </div>
+          <div class="field grid">
+            <div>
+              <label for="duration">Durasi (jam)</label>
+              <input id="duration" name="duration" type="number" min="1" max="12" value="2" required />
+            </div>
+            <div>
+              <label for="people">Jumlah orang</label>
+              <input id="people" name="people" type="number" min="1" max="10" value="2" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="fullname">Nama lengkap</label>
+            <input id="fullname" name="fullname" required />
+          </div>
+          <div class="field">
+            <label for="phone">Nomor WhatsApp</label>
+            <input id="phone" name="phone" type="tel" required />
+          </div>
+        </div>
+        <footer class="modal-footer">
+          <button class="btn btn-ghost" value="close">Batal</button>
+          <button class="btn btn-primary" value="submit">Kirim Permintaan</button>
+        </footer>
+        <p class="form-note" role="status" aria-live="polite" hidden data-booking-note></p>
+      </form>
+    </dialog>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js" defer></script>
+  </body>
+  </html>
+
